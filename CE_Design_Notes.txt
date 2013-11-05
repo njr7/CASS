@@ -1,0 +1,27 @@
+CLASS Editor Design Notes:
+
+-How to handle flow import?
+1.) Plan basic XML
+2.) Prepare database to receive XML
+3.) Create way to export and then read XML, to then populate flow automatically
+
+-How to handle adding an infinite amount of potential steps?
+multiple pages (recursive?)
+or
+javascript to manipulate one page (better option, possibly more work)
+
+
+
+
+
+Current Goal:
+-Implement the form for the first required step (creating a problem), insert submitted data into XML, insert XML into the database. Then be able to take the XML from the database, de-construct it, and use the data to rebuild the step.
+
+
+
+
+
+Step 1: Create A Question (Required)
+Instructions: Text Box
+
+Duration: 

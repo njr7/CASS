@@ -1,0 +1,311 @@
+/* ---------- Derrick Tabing ----------*/
+
+*, html, body, div, ul, li, h1, h2, h3, h4, 
+h5, h6, form, label, fieldset, input, p
+{
+	margin: 0;
+	padding: 0;
+}
+
+fieldset, img {	border: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+q:before, q:after { content: ''; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+a img {	border: none; } 
+a { text-decoration: none; }
+body { font-size: 1em; }
+
+
+/* ---------- Clearfix ---------- */
+.cf:before,
+.cf:after 
+{
+    content: "";
+    display: table;
+}
+
+.cf:after { clear:both; }
+.cf { zoom: 1; }
+
+
+/* ---------- General ---------- */
+p 
+{
+	margin-bottom: 1.25em;
+	color: #9498a1;
+}
+
+.fl { float: left; }
+.fr { float: right; }
+.cb { clear: both; }
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.625em; }
+
+
+/* ---------- Font Use ---------- */
+body, form 
+{
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+	line-height: 1.125em;
+}
+
+p, .button, form input, ul#nav li ul, ul#tabs, div.side-menu ul li a, 
+.custom-ul{ font-size: 0.75em; }
+
+div.content-module-heading span { font-size: 0.625em;  }
+
+form p input[type="text"], form p input[type="password"], form p input[type="checkbox"],
+form p input[type="radio"] { font-size: 1em; }
+
+h1 { font-size: 1.125em; }
+h2 { font-size: 0.875em; }
+h3 { font-size: 0.75em; }
+h4 { font-size: 0.685em; }
+h5 { font-size: 0.625em; }
+
+
+/* ---------- Colors ---------- */
+a { color: #2069b4; }
+a:hover { color: #2a2e36; }
+
+p a, p a:hover { border-bottom: 1px dotted; }
+
+.blue 
+{
+	background-color: #2069b4;
+	color: white;
+}
+
+.blue:hover 
+{
+	background-color: #5081b3;
+	color: white;
+}
+
+
+/* ---------- Widths ---------- */
+.default-width-input { width: 20.833em;  }	
+.full-width-input { width: 95%; }
+
+.full-width-textarea
+ {
+	width: 95%;
+	height: 12.5em; 
+}
+
+.page-full-width { padding: 0 1.875em;  }
+
+.page-limited 
+{
+	width: 60em;
+	margin: 0 auto;
+}
+
+
+/* ---------- Buttons ---------- */
+.button 
+{
+	padding: 0.833em; 
+	
+	display: inline-block;
+	text-decoration: none;
+	background-repeat: no-repeat;
+}
+
+.dark 
+{
+	background-color: #3f4551;
+	color: white;
+}
+
+.dark:hover 
+{
+	background-color: #5d6677;
+	color: white;
+}
+
+.text-upper { text-transform: uppercase; }
+.small-button { padding: 0.312em 1em; }
+
+
+/* ---------- Forms ---------- */
+form label 
+{
+	display: block;
+	text-transform: uppercase;
+	color: #2a2e36;
+	margin: 0 0 0.3125em 0;
+}
+
+form label.alt-label { text-transform: none; }
+
+form input[type="text"], input[type="password"], textarea 
+{
+	border: 1px solid #d9dbdd;
+	padding: 1em 0.625em; 
+	outline: none;
+}
+
+form input[type="text"]:hover, input[type="password"]:hover, textarea:hover,
+form input[type="text"]:focus, input[type="password"]:focus, textarea:focus 
+{
+	border: 1px solid #bbbdbe;
+}
+	
+form input[type="checkbox"], form input[type="radio"] { margin-right: 0.833em; }
+
+form input[type="submit"]
+ {
+	border: none;
+	cursor: pointer;
+	padding: 0.833em; 
+
+	background-position: right center;
+	padding-right: 3em; 
+	background-repeat: no-repeat;
+	font-weight: bold;	
+}
+
+form p em 
+{
+	margin-top: 0.833em; 
+	display: block;
+}
+
+
+/* ---------- Menu ---------- */
+ul#nav
+{
+	list-style-type: none;
+}
+
+ul#nav > li 
+{
+float: left;
+margin-right: 0.312em; 
+position: relative;
+}
+
+ul#nav li:first-child { margin-left: 0; }
+ul#nav li:hover ul { left: 0;  }	
+
+ul#nav li:hover a
+{
+	background-color: #5d6677;
+	color: white;
+}
+		
+ul#nav li.v-sep 
+{
+	border-right: 1px solid #3f4551;
+	margin-right: 0.625em; 
+	padding-right: 0.625em; 
+}
+
+ul#nav li ul 
+{
+	list-style-type: none;
+	position: absolute;
+	z-index: 999;
+	margin-top: -2px;
+	left: -9999px;
+}
+
+
+/* ---------- Top + Header ---------- */
+div#top-bar 
+{
+	background-color: #2a2e36;
+	padding: 0.625em 0; 
+}
+
+div#header { padding: 1.25em 0; }
+div#header-with-tabs { padding: 1.25em 0 0 0; }
+
+div#login-intro 
+{
+	background: transparent url('../images/icon1.png') no-repeat left center;
+	padding: 0.312em 0 0.312em 3.125em;
+}
+
+div#login-intro h1 { margin: 0.312em 0 0 0; }
+div#login-intro h5 { color: #9498a1; }
+
+
+/* ---------- Content ---------- */
+div#content 
+{
+	background: #f8f9fa repeat-x left bottom;
+	border: 1px solid #eeefef;
+	padding: 1.875em 0; 
+}
+
+form#login-form 
+{
+	width: 18.75em; 
+	margin: 0 auto;
+}
+
+div.side-menu 
+{
+	background: #3f4551;
+	border: 1px solid #eeefef;
+	width: 15%;
+	margin-bottom: 1em; 
+}
+
+div.side-menu h3 
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin:  1.25em; 
+	color: white;
+}
+	
+div.side-menu ul { list-style-type: none; }
+	
+div.side-menu ul li a 
+{
+	padding: 0.833em 1.25em;
+	border-top: 1px solid #f8f9fa;
+	display: block;
+	background: white no-repeat right center;
+}
+		
+div.side-menu ul li a:hover 
+{
+	background-color: #f8f9fa;
+}
+
+div.side-content { width: 83%;  }
+
+div.content-module
+ {
+	background: white;
+	margin-bottom: 1em; 
+	border: 1px solid #eeefef;
+}
+
+div.content-module-heading 
+{
+	background: #3f4551;
+	cursor: pointer;
+}
+
+div.content-module-heading h3 
+{
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+	margin: 1.25em; 
+}
+
+div.content-module-heading span 
+{ 
+	color: #969dac;
+	text-transform: uppercase;
+	margin: 1.5em; 
+}
+
+div.content-module-main { padding: 1em; }
