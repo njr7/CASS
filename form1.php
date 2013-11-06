@@ -80,6 +80,7 @@ if($_SESSION['assignment_xml'])
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" /> Create Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" disabled="disabled" /> Edit Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" disabled="disabled" /> Solve Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading Options </label>
 										<?php
 										}
 										?>
@@ -90,7 +91,32 @@ if($_SESSION['assignment_xml'])
 										?>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" disabled="disabled"/> Create Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" /> Edit Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" disabled="disabled" /> Solve Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading Options </label>
+										<?php
+										}
+										?>
+									
+										<?php
+										if($_SESSION['current_task'] == 3)
+										{
+										?>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" disabled="disabled" /> Create Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" disabled="disabled" /> Edit Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" /> Solve Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading Options </label>
+										<?php
+										}
+										?>
+										
+										<?php
+										if($_SESSION['current_task'] == 4)
+										{
+										?>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" disabled="disabled" /> Create Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" disabled="disabled" /> Edit Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" disabled="disabled" /> Solve Problem </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" /> Grading Options </label>
 										<?php
 										}
 										?>
