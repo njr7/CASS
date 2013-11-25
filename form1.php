@@ -4,7 +4,7 @@ session_start();
 
 $_SESSION['current_task'] = $_SESSION['current_task'] + 1;
 
-if($_SESSION['current_task'] == 1)
+if($_SESSION['current_task'] == 1 && $_SESSION['current_question'] == 1)
 {
 	$_SESSION['assignment_name'] = $_POST['assignment_name'];
 	$_SESSION['assignment_description'] = $_POST['assignment_description'];
@@ -16,7 +16,14 @@ if($_SESSION['assignment_xml'])
 {
 	$assignment_xml = $_SESSION['assignment_xml'];
 	$assignment = new SimpleXMLElement($assignment_xml);
-	echo $assignment->asXML();
+}
+
+if($_SESSION['number_of_questions'])
+{
+	if($_SESSION['current_question'] > $_SESSION['number_of_questions'])
+	{
+		header('Location: http://web.njit.edu/~njr7/ce/view.php');
+	}
 }
 
 ?>

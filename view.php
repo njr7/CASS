@@ -2,6 +2,11 @@
 
 session_start();
 
+if($_SESSION['assignment_xml'])
+{
+	$assignment_xml = $_SESSION['assignment_xml'];
+	$assignment = new SimpleXMLElement($assignment_xml);
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +58,9 @@ session_start();
 					<div class="content-module-main cf">
 						<div class="half-size-column fl">
 								<fieldset>
-
+									<?php
+									echo $assignment->asXML();
+									?>
 								</fieldset>	
 							</form>
 						</div>
