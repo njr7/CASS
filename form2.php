@@ -95,8 +95,8 @@ if($_POST['selected_task'] != NULL)
 										<br><br>
 										
 										<p>
-											<label for="C_description">Task Description:</label>
-											<textarea name="C_description" rows="4" cols="50"></textarea>
+											<label for="C_instructions">Task Instructions:</label>
+											<textarea name="C_instructions" rows="4" cols="50"></textarea>
 											<em>Enter the description/instructions for this task.</em>	
 										</p>	
 										
@@ -141,7 +141,16 @@ if($_POST['selected_task'] != NULL)
 												<option value="Opt2">The user forfeits right to complete the task any more</option>
 												<option value="Opt3">The task is considered complete</option>
 											</select>
-										</p>	
+										</p>
+
+										<p>
+											<h3>Who is assigned this task?</h3>
+											<select id="C_assignee" name="C_assignee">
+												<option value=""></option>
+												<option value="Students">Students</option>
+												<option value="Teacher">Teacher</option>
+											</select>
+										</p>											
 									<?php									
 									}	
 
@@ -182,6 +191,15 @@ if($_POST['selected_task'] != NULL)
 										</p>									
 
 										<p>
+											<h3>Does this task loop back to create problem until approved?</h3>
+											<select id="E_loop" name="E_loop">
+												<option value=""></option>
+												<option value="Yes">Yes</option>
+												<option value="No">No</option>
+											</select>
+										</p>										
+										
+										<p>
 											<h3>Does this task get graded?</h3>
 											<select id="E_graded" name="E_graded">
 												<option value=""></option>
@@ -198,7 +216,16 @@ if($_POST['selected_task'] != NULL)
 												<option value="Opt2">The user forfeits right to complete the task any more</option>
 												<option value="Opt3">The task is considered complete</option>
 											</select>
-										</p>									
+										</p>	
+
+										<p>
+											<h3>Who is assigned this task?</h3>
+											<select id="E_assignee" name="E_assignee">
+												<option value=""></option>
+												<option value="Students">Students</option>
+												<option value="Teacher">Teacher</option>
+											</select>
+										</p>												
 									<?php									
 									}		
 									
@@ -255,7 +282,16 @@ if($_POST['selected_task'] != NULL)
 												<option value="Opt2">The user forfeits right to complete the task any more</option>
 												<option value="Opt3">The task is considered complete</option>
 											</select>
-										</p>	
+										</p>
+
+										<p>
+											<h3>Who is assigned this task?</h3>
+											<select id="S_assignee" name="S_assignee">
+												<option value=""></option>
+												<option value="Students">Students</option>
+												<option value="Teacher">Teacher</option>
+											</select>
+										</p>												
 									<?php									
 									}									
 									
@@ -264,7 +300,7 @@ if($_POST['selected_task'] != NULL)
 									?>								
 										<p>
 											<label for="task_type">Task Type</label>
-											<input type="text" name="task_type" id="task_type" value="Grading Options" disabled="disabled" />
+											<input type="text" name="task_type" id="task_type" value="Grading" disabled="disabled" />
 										</p>
 
 										<p>
@@ -312,7 +348,16 @@ if($_POST['selected_task'] != NULL)
 												<option value="Opt2">The user forfeits right to complete the task any more</option>
 												<option value="Opt3">The task is considered complete</option>
 											</select>
-										</p>										
+										</p>	
+
+										<p>
+											<h3>Who is assigned this task?</h3>
+											<select id="G_assignee" name="G_assignee">
+												<option value=""></option>
+												<option value="Students">Students</option>
+												<option value="Teacher">Teacher</option>
+											</select>
+										</p>												
 									<?php									
 									}									
 									?>

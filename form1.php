@@ -22,7 +22,7 @@ if($_SESSION['number_of_questions'])
 {
 	if($_SESSION['current_question'] > $_SESSION['number_of_questions'])
 	{
-		header('Location: http://web.njit.edu/~njr7/ce/view.php');
+		header('Location: http://web.njit.edu/~njr7/ce/backend.php');
 	}
 }
 
@@ -87,7 +87,7 @@ if($_SESSION['number_of_questions'])
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" /> Create Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" disabled="disabled" /> Edit Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" disabled="disabled" /> Solve Problem </label>
-										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading Options </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading </label>
 										<?php
 										}
 										?>
@@ -99,7 +99,7 @@ if($_SESSION['number_of_questions'])
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" disabled="disabled"/> Create Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" /> Edit Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" disabled="disabled" /> Solve Problem </label>
-										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading Options </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading </label>
 										<?php
 										}
 										?>
@@ -111,7 +111,7 @@ if($_SESSION['number_of_questions'])
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" disabled="disabled" /> Create Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" disabled="disabled" /> Edit Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" /> Solve Problem </label>
-										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading Options </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" disabled="disabled" /> Grading </label>
 										<?php
 										}
 										?>
@@ -123,7 +123,7 @@ if($_SESSION['number_of_questions'])
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="C" disabled="disabled" /> Create Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="E" disabled="disabled" /> Edit Problem </label>
 										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="S" disabled="disabled" /> Solve Problem </label>
-										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" /> Grading Options </label>
+										<label for="selected_task" class="alt-label"><input type="checkbox" name="selected_task" value="G" /> Grading </label>
 										<?php
 										}
 										?>
