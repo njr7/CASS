@@ -367,9 +367,9 @@ if($_POST['selected_task'] != NULL)
 									&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 									&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 									&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-									<a href="http://web.njit.edu/~njr7/ce/index.php" class="dark button">Save and cancel</a>
+									<a href="index.php" class="dark button">Save and cancel</a>
 									&nbsp &nbsp
-									<a href="http://web.njit.edu/~njr7/ce/restart.php" class="dark button">Cancel without saving</a>
+									<a href="restart.php" class="dark button">Cancel without saving</a>
 									
 								</fieldset>	
 							</form>

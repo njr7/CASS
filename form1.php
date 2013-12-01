@@ -22,7 +22,7 @@ if($_SESSION['number_of_questions'])
 {
 	if($_SESSION['current_question'] > $_SESSION['number_of_questions'])
 	{
-		header('Location: http://web.njit.edu/~njr7/ce/backend.php');
+		header('Location: backend.php');
 	}
 }
 
