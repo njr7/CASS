@@ -29,8 +29,7 @@ if($_POST['selected_task'] != NULL)
 		<div id="top-bar">
 			<div class="page-full-width cf">
 				<ul id="nav" class="fl">
-				<li class="v-sep"><a href="http://web.njit.edu/~njr7/ce/index.php" class="button dark">Home</a></li>
-				</strong></a></li>
+					<li class="v-sep"><a href="http://web.njit.edu/~njr7/ce/index.php" class="button dark">Home</a></li>
 				</ul>		
 			</div> 	
 		</div> 
