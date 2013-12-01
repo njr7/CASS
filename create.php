@@ -21,7 +21,7 @@ $_SESSION['current_task'] = 0;
 		<div id="top-bar">
 			<div class="page-full-width cf">
 				<ul id="nav" class="fl">
-					<li class="v-sep"><a href="http://web.njit.edu/~njr7/ce/index.php" class="button dark">Home</a></li>
+					<li class="v-sep"><a href="index.php" class="button dark">Home</a></li>
 				</ul>		
 			</div> 	
 		</div> 
@@ -41,9 +41,9 @@ $_SESSION['current_task'] = 0;
 				<div class="side-menu fl">				
 					<h3>Side Menu</h3>
 					<ul>
-						<li><a href="http://web.njit.edu/~njr7/ce/create.php">Create New Assignment</a></li>
-						<li><a href="http://web.njit.edu/~njr7/ce/import.php">Import Assignment</a></li>
-						<li><a href="http://web.njit.edu/~njr7/ce/view.php">View Assignment</a></li>
+						<li><a href="create.php">Create New Assignment</a></li>
+						<li><a href="import.php">Import Assignment</a></li>
+						<li><a href="view.php">View Assignment</a></li>
 					</ul>				
 				</div>	
 				<div class="side-content fr">							
@@ -54,7 +54,7 @@ $_SESSION['current_task'] = 0;
 					</div>
 					<div class="content-module-main cf">
 						<div class="half-size-column fl">
-							<form action="http://web.njit.edu/~njr7/ce/form1.php" method="post" id="flow-info">
+							<form action="form1.php" method="post" id="flow-info">
 								<fieldset>
 									<p>
 										<label for="assignment_name">Assignment Name:</label>
@@ -76,7 +76,7 @@ $_SESSION['current_task'] = 0;
 									<br><br>									
 									<p>
 										<label for="group_size">Group Size:</label>
-										<input type="text" size="2" name="group_size" id="group_size" />
+										<input type="text" size="2" name="group_size" value="1" id="group_size" />
 										<em>Enter how many students there will be per group (Enter 1 for no groups).</em>
 									</p>									
 									

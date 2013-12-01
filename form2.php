@@ -29,7 +29,7 @@ if($_POST['selected_task'] != NULL)
 		<div id="top-bar">
 			<div class="page-full-width cf">
 				<ul id="nav" class="fl">
-					<li class="v-sep"><a href="http://web.njit.edu/~njr7/ce/index.php" class="button dark">Home</a></li>
+					<li class="v-sep"><a href="index.php" class="button dark">Home</a></li>
 				</ul>		
 			</div> 	
 		</div> 
@@ -49,9 +49,9 @@ if($_POST['selected_task'] != NULL)
 				<div class="side-menu fl">				
 					<h3>Side Menu</h3>
 					<ul>
-						<li><a href="http://web.njit.edu/~njr7/ce/create.php">Create New Assignment</a></li>
-						<li><a href="http://web.njit.edu/~njr7/ce/import.php">Import Assignment</a></li>
-						<li><a href="http://web.njit.edu/~njr7/ce/view.php">View Assignment</a></li>
+						<li><a href="create.php">Create New Assignment</a></li>
+						<li><a href="import.php">Import Assignment</a></li>
+						<li><a href="view.php">View Assignment</a></li>
 					</ul>				
 				</div>	
 				<div class="side-content fr">							
@@ -62,7 +62,7 @@ if($_POST['selected_task'] != NULL)
 					</div>
 					<div class="content-module-main cf">
 						<div class="half-size-column fl">
-							<form action="http://web.njit.edu/~njr7/ce/proxy.php" method="post" id="create_question">
+							<form action="proxy.php" method="post" id="create_question">
 								<fieldset>								
 									<?php							
 									if($_SESSION['selected_task'] == "C")
