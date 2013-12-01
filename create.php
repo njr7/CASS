@@ -58,7 +58,7 @@ $_SESSION['current_task'] = 0;
 								<fieldset>
 									<p>
 										<label for="assignment_name">Assignment Name:</label>
-										<input type="text" name="assignment_name" id="assignment_name" class="round full-width-input"/>
+										<input type="text" name="assignment_name" id="assignment_name" class="round full-width-input" required/>
 										<em>Enter the title of this assignment.</em>	
 									</p>	
 									<br><br>
@@ -70,7 +70,7 @@ $_SESSION['current_task'] = 0;
 									<br><br>
 									<p>
 										<label for="number_of_questions">Number of Questions:</label>
-										<input type="text" size="2" name="number_of_questions" id="number_of_questions" />
+										<input type="text" size="2" name="number_of_questions" id="number_of_questions" required/>
 										<em>Enter the total number of questions that this assignment will contain.</em>	
 									</p>									
 									<br><br>									
@@ -86,9 +86,9 @@ $_SESSION['current_task'] = 0;
 										&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 										&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 										&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-										<a href="http://web.njit.edu/~njr7/ce/index.php" class="dark button">Save and cancel</a>
+										<a href="index.php" class="dark button">Save and cancel</a>
 										&nbsp &nbsp
-										<a href="http://web.njit.edu/~njr7/ce/restart.php" class="dark button">Cancel without saving</a>											
+										<a href="restart.php" class="dark button">Cancel without saving</a>											
 									</p>															
 								</fieldset>	
 							</form>
