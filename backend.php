@@ -9,6 +9,6 @@ $assignment_xml = $_SESSION['assignment_xml'];
 
 $query = mysql_query("INSERT INTO CASS VALUES ('','$assignment_xml')");
 
-header('Location: view.php');
+header('Location: http://web.njit.edu/~njr7/ce/view.php');
 
 ?>

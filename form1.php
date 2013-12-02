@@ -4,14 +4,6 @@ session_start();
 
 $_SESSION['current_task'] = $_SESSION['current_task'] + 1;
 
-if($_SESSION['current_task'] == 1 && $_SESSION['current_question'] == 1)
-{
-	$_SESSION['assignment_name'] = $_POST['assignment_name'];
-	$_SESSION['assignment_description'] = $_POST['assignment_description'];
-	$_SESSION['number_of_questions'] = $_POST['number_of_questions'];
-	$_SESSION['group_size'] = $_POST['group_size'];
-}
-
 if($_SESSION['assignment_xml'])
 {
 	$assignment_xml = $_SESSION['assignment_xml'];
@@ -22,7 +14,7 @@ if($_SESSION['number_of_questions'])
 {
 	if($_SESSION['current_question'] > $_SESSION['number_of_questions'])
 	{
-		header('Location: backend.php');
+		header('Location: http://web.njit.edu/~njr7/ce/backend.php');
 	}
 }
 
@@ -32,6 +24,19 @@ if($_SESSION['number_of_questions'])
 
 <html lang="en">
 	<head>
+		<script type="text/javascript"> 
+			function stopRKey(evt) 
+			{ 
+				var evt = (evt) ? evt : ((event) ? event : null); 
+				var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+				if ((evt.keyCode == 13) && (node.type=="text"))  
+				{
+					return false;
+				} 
+			} 
+
+			document.onkeypress = stopRKey; 
+		</script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<title>CASS Editor</title>   
 		<link rel="stylesheet" href="css/style3.css">
@@ -42,7 +47,8 @@ if($_SESSION['number_of_questions'])
 		<div id="top-bar">
 			<div class="page-full-width cf">
 				<ul id="nav" class="fl">
-					<li class="v-sep"><a href="index.php" class="button dark">Home</a></li>
+				<li class="v-sep"><a href="http://web.njit.edu/~njr7/ce/index.php" class="button dark">Home</a></li>
+				</strong></a></li>
 				</ul>		
 			</div> 	
 		</div> 
@@ -62,9 +68,9 @@ if($_SESSION['number_of_questions'])
 				<div class="side-menu fl">				
 					<h3>Side Menu</h3>
 					<ul>
-						<li><a href="create.php">Create New Assignment</a></li>
-						<li><a href="import.php">Import Assignment</a></li>
-						<li><a href="view.php">View Assignment</a></li>
+						<li><a href="http://web.njit.edu/~njr7/ce/create.php">Create New Assignment</a></li>
+						<li><a href="http://web.njit.edu/~njr7/ce/import.php">Import Assignment</a></li>
+						<li><a href="http://web.njit.edu/~njr7/ce/view.php">View Assignment</a></li>
 					</ul>				
 				</div>	
 				<div class="side-content fr">							
@@ -75,7 +81,7 @@ if($_SESSION['number_of_questions'])
 					</div>
 					<div class="content-module-main cf">
 						<div class="half-size-column fl">
-							<form action="form2.php" method="post" id="step-choice">
+							<form action="http://web.njit.edu/~njr7/ce/form2.php" method="post" id="step-choice">
 								<fieldset>	
 								
 									<p>																		
@@ -135,9 +141,9 @@ if($_SESSION['number_of_questions'])
 										&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 										&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 										&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-										<a href="index.php" class="dark button">Save and cancel</a>
+										<a href="http://web.njit.edu/~njr7/ce/index.php" class="dark button">Save but do not submit</a>
 										&nbsp &nbsp
-										<a href="restart.php" class="dark button">Cancel without saving</a>											
+										<a href="http://web.njit.edu/~njr7/ce/restart.php" class="dark button">Cancel without saving</a>											
 									</p>							
 								</fieldset>	
 							</form>
