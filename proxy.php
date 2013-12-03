@@ -139,10 +139,13 @@ if($_SESSION['current_task'] == 4)
 {
 	$_SESSION['current_task'] = 0;
 	$_SESSION['current_question'] = $_SESSION['current_question'] + 1;
+	$_SESSION['assignment_xml'] = $assignment->asXML();
+	header('Location: http://web.njit.edu/~njr7/ce/success.php');
 }
-
-$_SESSION['assignment_xml'] = $assignment->asXML();
-
-header('Location: http://web.njit.edu/~njr7/ce/form1.php');
-
+else
+{
+	$_SESSION['assignment_xml'] = $assignment->asXML();
+	
+	header('Location: http://web.njit.edu/~njr7/ce/form1.php');
+}
 ?>
