@@ -154,6 +154,7 @@ function test_input($data)
 <html lang="en">
 	<head>
 		<script type="text/javascript"> 
+			//function to stop the Enter key from submitting the form
 			function stopRKey(evt) 
 			{ 
 				var evt = (evt) ? evt : ((event) ? event : null); 
@@ -215,11 +216,11 @@ function test_input($data)
 						<div class="half-size-column fl">
 							<p><span class="error">* required field.</span></p>
 							<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="flow-info">
-								<fieldset>								
+								<fieldset>
 									<?php							
 									if($_SESSION['selected_task'] == "C")
 									{
-										if(isset($_POST['submit2']) && $Error1 == "" && $Error2 == "")
+										if(isset($_POST['submit2']) && $Error1 == "" && $Error2 == "") //add new create restraint here
 										{
 											$_SESSION['C_question_type'] = $_POST['C_question_type'];
 											$_SESSION['C_instructions'] = $_POST['C_instructions'];
@@ -229,6 +230,7 @@ function test_input($data)
 											$_SESSION['C_graded'] = $_POST['C_graded'];
 											$_SESSION['C_late'] = $_POST['C_late'];
 											$_SESSION['C_assignee'] = $_POST['C_assignee'];
+											//new create parameter (submit)
 
 											header('Location: http://web.njit.edu/~njr7/ce/proxy.php');
 										}	
@@ -243,6 +245,7 @@ function test_input($data)
 											$_SESSION['C_graded'] = $_POST['C_graded'];
 											$_SESSION['C_late'] = $_POST['C_late'];
 											$_SESSION['C_assignee'] = $_POST['C_assignee'];
+											//new create parameter (save)
 
 											header('Location: http://web.njit.edu/~njr7/ce/index.php');
 										}
@@ -338,6 +341,7 @@ function test_input($data)
 											$_SESSION['E_graded'] = $_POST['E_graded'];
 											$_SESSION['E_late'] = $_POST['E_late'];
 											$_SESSION['E_assignee'] = $_POST['E_assignee'];
+											//new edit parameter (submit)
 
 											header('Location: http://web.njit.edu/~njr7/ce/proxy.php');
 										}	
@@ -351,7 +355,8 @@ function test_input($data)
 											$_SESSION['E_graded'] = $_POST['E_graded'];
 											$_SESSION['E_late'] = $_POST['E_late'];
 											$_SESSION['E_assignee'] = $_POST['E_assignee'];
-
+											//new edit parameter (save)
+											
 											header('Location: http://web.njit.edu/~njr7/ce/index.php');
 										}
 									?>
@@ -431,6 +436,7 @@ function test_input($data)
 											$_SESSION['S_graded'] = $_POST['S_graded'];
 											$_SESSION['S_late'] = $_POST['S_late'];
 											$_SESSION['S_assignee'] = $_POST['S_assignee'];
+											//new solve parameter (submit)
 
 											header('Location: http://web.njit.edu/~njr7/ce/proxy.php');
 										}	
@@ -443,6 +449,7 @@ function test_input($data)
 											$_SESSION['S_graded'] = $_POST['S_graded'];
 											$_SESSION['S_late'] = $_POST['S_late'];
 											$_SESSION['S_assignee'] = $_POST['S_assignee'];
+											//new solve parameter (save)
 
 											header('Location: http://web.njit.edu/~njr7/ce/index.php');
 										}
@@ -481,7 +488,7 @@ function test_input($data)
 										<p>
 											<h3>Does this task get graded?<span class="error"> *</span></h3>
 											<select id="S_graded" name="S_graded">
-												<option selected value="Yes">Yes</option>
+												<option selected value="Yes" selected >Yes</option>
 												<option value="No">No</option>
 											</select>
 										</p>
@@ -514,6 +521,7 @@ function test_input($data)
 											$_SESSION['G_duration_minutes'] = $_POST['G_duration_minutes'];
 											$_SESSION['G_late'] = $_POST['G_late'];
 											$_SESSION['G_assignee'] = $_POST['G_assignee'];
+											//new grade parameter (solve)
 
 											header('Location: http://web.njit.edu/~njr7/ce/proxy.php');
 										}	
@@ -525,6 +533,7 @@ function test_input($data)
 											$_SESSION['G_duration_minutes'] = $_POST['G_duration_minutes'];
 											$_SESSION['G_late'] = $_POST['G_late'];
 											$_SESSION['G_assignee'] = $_POST['G_assignee'];
+											//new grade parameter (solve)
 
 											header('Location: http://web.njit.edu/~njr7/ce/index.php');
 										}
