@@ -2,6 +2,20 @@
 
 session_start();
 
+/*
+$cq = $_SESSION['current_question'];
+$ct = $_SESSION['current_task'];
+$noq = $_SESSION['current_task'];
+$assignment_xml = $_SESSION['number_of_questions'];
+
+session_destroy();
+
+$_SESSION['current_question'] = $cq;
+$_SESSION['current_task'] = $ct;
+$_SESSION['assignment_xml'] = $assignment_xml;
+$_SESSION['number_of_questions'] = $noq;
+*/
+
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +68,16 @@ session_start();
 						<div class="half-size-column fl">
 								<fieldset>
 									<h1><b>Question #<?php echo ($_SESSION['current_question'] - 1); ?> has been successfully created!</b></h1>
+									<br><br>
+									<?php
+									if($_SESSION['current_question'] <= $_SESSION['number_of_questions'])
+									{
+									?>
+										<h1><b>Proceed to create question #<?php echo ($_SESSION['current_question']); ?>.</b></h1>
+									<?php
+									}
+									?>
+									
 									<a href="http://web.njit.edu/~njr7/ce/form1.php" class="dark button">Continue</a>
 								</fieldset>	
 							</form>

@@ -5,10 +5,6 @@ session_start();
 $_SESSION['current_question'] = 1;
 $_SESSION['current_task'] = 0;
 
-$_SESSION["number_of_questions"] = 1;   //default value
-$_SESSION["group_size"] = 1;                  // default value
-
-
 // Error handling and required field variables
 $Error1 = $Error2 = $Error3 = "";
 $assignment_name = $number_of_questions = $group_size = "";
@@ -176,18 +172,60 @@ if(isset($_POST['save']))
 										<textarea name="assignment_description" rows="4" cols="50"><?php echo $_SESSION["assignment_description"];?></textarea>
 									</p>										
 									<br><br>
+									
+									<?php 
+									if($_SESSION["number_of_questions"])
+									{
+									?>
 									<p>
 										<label for="number_of_questions">Number of Questions:<span class="error"> * <?php echo $Error2;?></span></label>
 										<em>Enter the total number of questions that this assignment will contain.</em>	
 										<input type="text" size="2" name="number_of_questions" value="<?php echo $_SESSION["number_of_questions"];?>" id="number_of_questions" />
-									</p>									
-									<br><br>									
+									</p>
+									<?php
+									}
+									?>
+									
+									<?php 
+									if(!$_SESSION["number_of_questions"])
+									{
+									?>
+									<p>
+										<label for="number_of_questions">Number of Questions:<span class="error"> * <?php echo $Error2;?></span></label>
+										<em>Enter the total number of questions that this assignment will contain.</em>	
+										<input type="text" size="2" name="number_of_questions" value="1" id="number_of_questions" />
+									</p>
+									<?php
+									}
+									?>
+									
+									<br><br>
+
+									<?php 
+									if($_SESSION["group_size"])
+									{
+									?>									
 									<p>
 										<label for="group_size">Group Size:<span class="error"> * <?php echo $Error3;?></span></label>
 										<em>Enter how many students there will be per group. 1 represents no groups.</em>
 										<input type="text" size="2" name="group_size" value="<?php echo $_SESSION["group_size"];?>" id="group_size" />
 									</p>									
-									
+									<?php
+									}
+									?>
+
+									<?php 
+									if(!$_SESSION["group_size"])
+									{
+									?>
+									<p>
+										<label for="group_size">Group Size:<span class="error"> * <?php echo $Error3; ?></span></label>
+										<em>Enter the total number of questions that this assignment will contain.</em>	
+										<input type="text" size="2" name="group_size" value="1" id="group_size" />
+									</p>
+									<?php
+									}
+									?>									
 									<p>									
 										<br><br><br>
 										<input type="submit" name="submit" value="Submit" class="dark" />

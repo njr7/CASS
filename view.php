@@ -77,13 +77,14 @@ if($_SESSION['assignment_xml'])
 											$assignment_xml = $row['assignment_xml'];
 											$assignment = new SimpleXMLElement($assignment_xml);	
 											echo "<option value=" . $row['ID'] . ">" . $assignment->name[0] . "</option>";
-										}		
+
+										}	
 										?>
 									</select>
 									<br>
 									<input type="submit" name="submit3" value="Submit" class="dark" />
+									
 									<?php
-
 									$view_assignment = $_POST['view_assignment'];
 									$query = mysql_query("SELECT * FROM CASS WHERE ID='$view_assignment'");
 									$row = mysql_fetch_assoc($query);
@@ -168,6 +169,7 @@ if($_SESSION['assignment_xml'])
 									}
 
 									?>
+
 								</fieldset>	
 							</form>
 						</div>
