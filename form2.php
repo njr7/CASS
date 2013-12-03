@@ -326,7 +326,9 @@ function test_input($data)
 												<option value="Students">Students</option>
 												<option selected value="Teacher">Teacher</option>
 											</select>
-										</p>											
+										</p>
+
+										<!-- New HTML form field here for Create -->
 									<?php									
 									}	
 
@@ -422,7 +424,9 @@ function test_input($data)
 												<option value="Students">Students</option>
 												<option selected value="Teacher">Teacher</option>
 											</select>
-										</p>												
+										</p>
+										
+										<!-- New HTML form field here for Edit -->
 									<?php									
 									}		
 									
@@ -508,7 +512,10 @@ function test_input($data)
 												<option selected value="Students">Students</option>
 												<option value="Teacher">Teacher</option>
 											</select>
-										</p>												
+										</p>
+
+										<!-- New HTML form field here for Solve-->
+
 									<?php									
 									}									
 									
@@ -521,7 +528,7 @@ function test_input($data)
 											$_SESSION['G_duration_minutes'] = $_POST['G_duration_minutes'];
 											$_SESSION['G_late'] = $_POST['G_late'];
 											$_SESSION['G_assignee'] = $_POST['G_assignee'];
-											//new grade parameter (solve)
+											//new grade parameter (submit)
 
 											header('Location: http://web.njit.edu/~njr7/ce/proxy.php');
 										}	
@@ -533,7 +540,7 @@ function test_input($data)
 											$_SESSION['G_duration_minutes'] = $_POST['G_duration_minutes'];
 											$_SESSION['G_late'] = $_POST['G_late'];
 											$_SESSION['G_assignee'] = $_POST['G_assignee'];
-											//new grade parameter (solve)
+											//new grade parameter (save)
 
 											header('Location: http://web.njit.edu/~njr7/ce/index.php');
 										}
@@ -584,7 +591,9 @@ function test_input($data)
 												<option value="Students">Students</option>
 												<option selected value="Teacher">Teacher</option>
 											</select>
-										</p>												
+										</p>
+
+										<!-- New HTML form field here for Grade -->
 									<?php									
 									}									
 									?>
